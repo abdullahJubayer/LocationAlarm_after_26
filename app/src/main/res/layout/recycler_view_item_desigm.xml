@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+    <View
+        android:id="@+id/color_id"
+        android:layout_width="7dp"
+        android:layout_height="match_parent"
+        />
+
+    <LinearLayout
+        android:id="@+id/item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="4"
+        android:paddingBottom="5dp"
+        >
+        <LinearLayout
+            android:id="@+id/layout_txt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3.2"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/title_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:text="Buy Banana"
+                android:textColor="@color/black"
+                android:paddingTop="5dp"
+                android:paddingLeft="10dp"
+                android:paddingBottom="3dp"
+                />
+            <TextView
+                android:id="@+id/location_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:paddingLeft="10dp"
+                android:text="Latitude:1.97856567  Longitude:1.90439483948938934898439"
+                android:textColor="@color/black"
+                android:maxLines="1"
+                android:ellipsize="end"
+                />
+
+        </LinearLayout>
+        <RelativeLayout
+            android:layout_weight=".8"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@+id/layout_txt"
+
+            >
+                <TextView
+                    android:id="@+id/time_id"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textSize="20sp"
+                    android:textColor="@color/black"
+                    android:text="6:00 "
+                    android:paddingTop="5dp"
+                    android:layout_alignParentEnd="true"
+                    android:paddingLeft="5dp"
+                    />
+
+        </RelativeLayout>
+    </LinearLayout>
+
+
+</LinearLayout>

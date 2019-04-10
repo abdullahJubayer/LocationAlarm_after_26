@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Activity.NewTask">
+
+    <EditText
+        android:id="@+id/location_title_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="What You Want To Do?"
+        android:padding="10dp"
+        android:textSize="18sp"
+        android:maxLines="1"
+        android:ellipsize="end"
+        />
+
+
+    <TextView
+        android:id="@+id/location_time_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Set Time"
+        android:padding="5dp"
+        android:textSize="18sp"
+        />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/gray"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="4"
+        >
+
+
+        <EditText
+            android:id="@+id/location_text_id"
+            android:layout_width="0dp"
+            android:layout_weight="3.4"
+            android:layout_height="wrap_content"
+            android:hint="Set Location(Latitude ,Longitude)"
+            android:padding="10dp"
+            android:textSize="18sp"
+            android:maxLines="1"
+            android:ellipsize="end"
+            />
+        <RelativeLayout
+            android:layout_weight=".5"
+            android:layout_width="0dp"
+            android:layout_height="match_parent">
+            <ImageButton
+                android:id="@+id/location_button_id"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_my_location"
+                android:layout_alignParentEnd="true"
+                />
+
+        </RelativeLayout>
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/location_note_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Add Note"
+        android:padding="10dp"
+        android:textSize="18sp"
+        android:maxLines="5"
+        android:lines="3"
+        android:gravity="start"
+        android:layout_marginBottom="5dp"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/location_cancel_id"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:padding="10dp"
+            android:textStyle="bold"
+            android:text="Cancel"
+            />
+        <Button
+            android:id="@+id/location_save_id"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:padding="10dp"
+            android:textStyle="bold"
+            android:text="Save"
+            />
+
+    </LinearLayout>
+
+</LinearLayout>
