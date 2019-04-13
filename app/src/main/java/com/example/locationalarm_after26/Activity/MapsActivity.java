@@ -1,4 +1,4 @@
-package com.example.locationalarm_21_28.Activity;
+package com.example.locationalarm_after26.Activity;
 
 import android.Manifest;
 import android.content.Context;
@@ -15,7 +15,7 @@ import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
 import android.support.v4.content.ContextCompat;
 
-import com.example.locationalarm_21_28.R;
+import com.example.locationalarm_after26.R;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;

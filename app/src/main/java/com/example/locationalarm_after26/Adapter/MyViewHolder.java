@@ -1,11 +1,11 @@
-package com.example.locationalarm_21_28.Adapter;
+package com.example.locationalarm_after26.Adapter;
 
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.TextView;
 
-import com.example.locationalarm_21_28.R;
+import com.example.locationalarm_after26.R;
 
 public class MyViewHolder extends RecyclerView.ViewHolder{
     TextView title,location,time;

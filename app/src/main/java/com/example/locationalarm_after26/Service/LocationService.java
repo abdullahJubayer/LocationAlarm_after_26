@@ -1,4 +1,4 @@
-package com.example.locationalarm_21_28.Service;
+package com.example.locationalarm_after26.Service;
 
 import android.Manifest;
 import android.app.job.JobParameters;
@@ -11,13 +11,12 @@ import android.database.sqlite.SQLiteDatabase;
 import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
-import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.provider.Settings;
 import android.support.v4.content.ContextCompat;
 import android.util.Log;
 
-import com.example.locationalarm_21_28.Database.MyDatabase;
+import com.example.locationalarm_after26.Database.MyDatabase;
 import com.google.android.gms.maps.model.LatLng;
 
 import java.util.ArrayList;
@@ -118,7 +117,7 @@ public class LocationService extends JobService {
                         Log.e("MatchResult :","Match");
 
 //                        MediaPlayer mediaPlayer=MediaPlayer.create(getApplicationContext(), R.raw.alerm);
-                          stopSelf(id.get(i));
+                          stopSelf(serviceId.get(i));
 //                        mediaPlayer.start();
 //                        mediaPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
 //                            @Override
@@ -138,13 +137,12 @@ public class LocationService extends JobService {
 
                     }else {
                         Log.e("MatchResult :","Not Match");
-                        //stopSelf();
                     }
                 }
                 else {
                     Log.e("SetData :","null");
-                    //stopSelf();
                 }
+
             }
         }
     }

@@ -1,4 +1,4 @@
-package com.example.locationalarm_21_28.Database;
+package com.example.locationalarm_after26.Database;
 
 import android.content.ContentValues;
 import android.content.Context;
@@ -7,15 +7,15 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.widget.Toast;
 
-import com.example.locationalarm_21_28.ModelClass.Model;
+import com.example.locationalarm_after26.ModelClass.Model;
 
 import java.util.ArrayList;
 
 public class MyDatabase extends SQLiteOpenHelper {
 
     Context context;
-    private static  int VERSION=2;
-    private static  String TableName="LocationTable";
+    private static  int VERSION=1;
+    private static  String TableName="LocationData";
     private static  String ID="ID";
     private static  String Title="Title";
     private static  String Time="Time";
@@ -31,7 +31,7 @@ public class MyDatabase extends SQLiteOpenHelper {
 
 
     public MyDatabase(Context context) {
-        super(context, "Database", null, VERSION);
+        super(context, "MyDatabase", null, VERSION);
         this.context=context;
     }
 

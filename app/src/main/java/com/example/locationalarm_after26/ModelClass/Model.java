@@ -1,4 +1,4 @@
-package com.example.locationalarm_21_28.ModelClass;
+package com.example.locationalarm_after26.ModelClass;
 
 public class Model {
 

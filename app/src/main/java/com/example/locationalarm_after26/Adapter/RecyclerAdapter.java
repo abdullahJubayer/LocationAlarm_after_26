@@ -1,4 +1,4 @@
-package com.example.locationalarm_21_28.Adapter;
+package com.example.locationalarm_after26.Adapter;
 
 import android.content.Context;
 import android.support.annotation.NonNull;
@@ -7,8 +7,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.example.locationalarm_21_28.ModelClass.Model;
-import com.example.locationalarm_21_28.R;
+import com.example.locationalarm_after26.ModelClass.Model;
+import com.example.locationalarm_after26.R;
 
 import java.util.ArrayList;
 

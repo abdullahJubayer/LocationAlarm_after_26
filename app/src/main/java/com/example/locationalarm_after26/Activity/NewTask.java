@@ -1,4 +1,4 @@
-package com.example.locationalarm_21_28.Activity;
+package com.example.locationalarm_after26.Activity;
 
 import android.Manifest;
 import android.app.TimePickerDialog;
@@ -20,10 +20,10 @@ import android.widget.TextView;
 import android.widget.TimePicker;
 import android.widget.Toast;
 
-import com.example.locationalarm_21_28.Database.MyDatabase;
-import com.example.locationalarm_21_28.ModelClass.Model;
-import com.example.locationalarm_21_28.R;
-import com.example.locationalarm_21_28.Service.LocationService;
+import com.example.locationalarm_after26.Database.MyDatabase;
+import com.example.locationalarm_after26.ModelClass.Model;
+import com.example.locationalarm_after26.R;
+import com.example.locationalarm_after26.Service.LocationService;
 
 import java.util.Calendar;
 import java.util.Random;
@@ -76,22 +76,14 @@ public class NewTask extends AppCompatActivity implements View.OnClickListener {
                 if (ContextCompat.checkSelfPermission(NewTask.this,Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED){
                     saveData(title.getText().toString(),time.getText().toString(),pLocation[0],pLocation[1],note.getText().toString(),String.valueOf(id));
 
-                    ComponentName componentName=new ComponentName(NewTask.this, LocationService.class);
-                    JobInfo jobInfo=new JobInfo.Builder(123,componentName)
+                    ComponentName componentName=new ComponentName(this, LocationService.class);
+                    JobInfo jobInfo=new JobInfo.Builder(12,componentName)
                             .setRequiredNetworkType(JobInfo.NETWORK_TYPE_ANY)
                             .setRequiresBatteryNotLow(true)
+                            .setPersisted(true)
                             .build();
                     JobScheduler scheduler= (JobScheduler) getSystemService(JOB_SCHEDULER_SERVICE);
-                    int result=scheduler.schedule(jobInfo);
-
-                    if (result == JobScheduler.RESULT_SUCCESS){
-                        scheduler.cancel(123);
-                        Log.e("Job Result","Success");
-                    }
-                    else if (result == JobScheduler.RESULT_FAILURE){
-                        Log.e("Job Result","Failed");
-                        scheduler.schedule(jobInfo);
-                    }
+                    scheduler.schedule(jobInfo);
                 }
                 else
                 {

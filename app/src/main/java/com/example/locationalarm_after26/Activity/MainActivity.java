@@ -1,4 +1,4 @@
-package com.example.locationalarm_21_28.Activity;
+package com.example.locationalarm_after26.Activity;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -9,10 +9,10 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 
-import com.example.locationalarm_21_28.Adapter.RecyclerAdapter;
-import com.example.locationalarm_21_28.Database.MyDatabase;
-import com.example.locationalarm_21_28.ModelClass.Model;
-import com.example.locationalarm_21_28.R;
+import com.example.locationalarm_after26.Adapter.RecyclerAdapter;
+import com.example.locationalarm_after26.Database.MyDatabase;
+import com.example.locationalarm_after26.ModelClass.Model;
+import com.example.locationalarm_after26.R;
 
 import java.util.ArrayList;
 
